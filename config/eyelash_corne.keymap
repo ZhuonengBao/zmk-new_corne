@@ -87,7 +87,7 @@
             bindings = <
 &trans  &kp Q           &kp W           &kp F               &kp P             &kp B                          &kp UP                &kp J        &kp L              &kp U         &kp Y            &kp SQT          &trans
 &trans  &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G                &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &mt RIGHT_SHIFT N  &mt RCTRL E   &mt RIGHT_ALT I  &mt RIGHT_GUI O  &trans
-&trans  &lt 3 Z         &kp X           &kp C               &kp D             &kp V      &trans              &kp DOWN              &kp K        &kp M              &kp COMMA     &kp DOT          &lt 3 FSLH       &trans
+&trans  &lt 3 Z         &kp X           &kp C               &kp D             &kp V      &trans              &kp DOWN              &kp K        &kp H              &kp COMMA     &kp DOT          &lt 3 FSLH       &trans
                                         &lt 4 ESCAPE        &lt 1 SPACE       &lt 2 TAB                                            &lt 6 ENTER  &lt 5 BACKSPACE    &lt 7 DELETE
             >;
 
@@ -108,7 +108,7 @@
         mouse_layer {
             bindings = <
 &trans  &trans    &trans    &trans     &trans     &trans                    &trans          &kp K_REDO  &kp K_PASTE     &kp K_COPY      &kp K_CUT     &kp K_UNDO       &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans            &trans  &trans  &trans  &trans      &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans            &trans  &trans  &trans  &trans      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
 &trans  &trans    &trans    &trans     &trans     &trans  &trans            &trans          &trans      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
                             &trans     &trans     &trans                                    &mkp RCLK   &mkp LCLK       &mkp MCLK
             >;
