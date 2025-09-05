@@ -83,7 +83,7 @@
         compatible = "zmk,keymap";
 
         base_layer {
-            display-name = "QWERTY";
+            display-name = "BASE";
             bindings = <
 &trans  &kp Q           &kp W           &kp F               &kp P             &kp B                          &kp UP                &kp J        &kp L              &kp U         &kp Y            &kp SQT          &trans
 &trans  &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G                &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &mt RIGHT_SHIFT N  &mt RCTRL E   &mt RIGHT_ALT I  &mt RIGHT_GUI O  &trans
@@ -103,6 +103,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            label = "NAV";
         };
 
         mouse_layer {
@@ -114,6 +115,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            label = "MOUSE";
         };
 
         button_layer {
@@ -125,6 +127,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            label = "BUTTON";
         };
 
         media_layer {
@@ -136,6 +139,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            label = "MEDIA";
         };
 
         num_layer {
@@ -147,6 +151,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            label = "NUM";
         };
 
         sym_layer {
@@ -158,6 +163,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            label = "SYM";
         };
 
         fun_layer {
@@ -168,7 +174,20 @@
                          &trans  &trans  &trans                                             &trans  &trans           &trans
             >;
 
+            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRI_DEC>;
+            label = "FUN";
+        };
+
+        vim_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &kp H   &kp J   &kp K   &kp L   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
+            >;
+
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            label = "VIM";
         };
     };
 };
