@@ -142,10 +142,10 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp GRAVE  &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE                         &trans          &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR     &trans             &trans
-&trans  &kp EXCL   &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND            &trans  &trans  &trans  &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp DOUBLE_QUOTES  &trans
-&trans  &kp TILDE  &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT    &trans            &trans          &kp AT_SIGN  &kp COLON             &kp COMMA              &kp PERIOD     &kp APOSTROPHE     &trans
-                                  &trans            &trans             &trans                                           &trans       &trans                &trans
+&trans  &kp GRAVE  &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE                         &trans          &kp CARET    &kp LEFT_BRACE              &kp RIGHT_BRACE        &kp DOLLAR     &kp UNDERSCORE     &trans
+&trans  &kp EXCL   &kp ASTERISK   &kp SLASH         &mt LSHIFT EQUAL   &kp AMPERSAND            &trans  &trans  &trans  &kp HASH     &mt RSHFT LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp DOUBLE_QUOTES  &trans
+&trans  &kp TILDE  &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT    &trans            &trans          &kp AT_SIGN  &kp COLON                   &kp COMMA              &kp PERIOD     &kp APOSTROPHE     &trans
+                                  &trans            &trans             &trans                                           &trans       &trans                      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
