@@ -55,6 +55,15 @@
 
     combos { compatible = "zmk,combos"; };
 
+    macros {
+        double_colon: double_colon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp COLON>;
+            label = "DOUBLE_COLON";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -85,10 +94,10 @@
         mouse_layer {
             display-name = "MOUSE";
             bindings = <
-&trans  &trans    &trans    &trans     &trans     &trans                    &trans          &kp K_REDO  &kp K_PASTE     &kp K_COPY      &kp K_CUT     &kp K_UNDO       &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans            &trans  &trans  &trans  &trans      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
-&trans  &trans    &trans    &trans     &trans     &trans  &trans            &trans          &trans      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
-                            &trans     &trans     &trans                                    &mkp RCLK   &mkp LCLK       &mkp MCLK
+&trans  &trans    &trans    &trans     &trans     &trans                            &mmv MOVE_UP                     &kp K_REDO  &kp K_PASTE     &kp K_COPY      &kp K_CUT     &kp K_UNDO       &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
+&trans  &trans    &trans    &trans     &trans     &trans  &trans                    &mmv MOVE_DOWN                   &trans      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
+                            &trans     &trans     &trans                                                             &mkp RCLK   &mkp LCLK       &mkp MCLK
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -133,10 +142,10 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL  &kp AT_SIGN  &kp HASH       &kp DOLLAR  &kp PERCENT                      &trans          &kp EQUAL     &kp GRAVE              &kp COLON        &kp SEMICOLON      &kp PLUS        &trans
-&trans  &kp LGUI  &kp LALT     &kp LCTRL      &kp LSHFT   &kp CARET                &trans  &trans  &trans  &kp ASTERISK  &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp LEFT_BRACKET   &kp MINUS       &trans
-&trans  &trans    &trans       &kp BACKSLASH  &kp PIPE    &kp AMPERSAND  &trans            &trans          &kp TILDE     &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp UNDERSCORE  &trans
-                               &trans         &trans      &trans                                           &trans        &trans                 &trans
+&trans  &kp GRAVE  &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE                         &trans          &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR     &trans             &trans
+&trans  &kp EXCL   &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND            &trans  &trans  &trans  &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp DOUBLE_QUOTES  &trans
+&trans  &kp TILDE  &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT    &trans            &trans          &kp AT_SIGN  &kp COLON             &kp COMMA              &kp PERIOD     &kp APOSTROPHE     &trans
+                                  &trans            &trans             &trans                                           &trans       &trans                &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
